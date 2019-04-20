@@ -35,8 +35,8 @@
     <Reference Include="Itenso.TimePeriod, Version=2.1.1.0, Culture=neutral, PublicKeyToken=8cb6db75b4e81486, processorArchitecture=MSIL">
       <HintPath>..\packages\TimePeriodLibrary.NET.2.1.1\lib\net46\Itenso.TimePeriod.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,19 +47,20 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TEC.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fa430e8d94144bb0, processorArchitecture=MSIL">
-      <HintPath>..\packages\TEC_Core_Library.1.2.44\lib\net46\TEC.Core.dll</HintPath>
+      <HintPath>..\packages\TEC_Core_Library.1.2.50\lib\net46\TEC.Core.dll</HintPath>
     </Reference>
     <Reference Include="TEC.Core.Portable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fa430e8d94144bb0, processorArchitecture=MSIL">
-      <HintPath>..\packages\TEC_Core_Library.1.2.44\lib\net46\TEC.Core.Portable.dll</HintPath>
+      <HintPath>..\packages\TEC_Core_Library.1.2.50\lib\net46\TEC.Core.Portable.dll</HintPath>
     </Reference>
     <Reference Include="TEC.Core.Scheduler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fa430e8d94144bb0, processorArchitecture=MSIL">
-      <HintPath>..\packages\TEC_Core_Scheduler_Library.1.0.33\lib\net46\TEC.Core.Scheduler.dll</HintPath>
+      <HintPath>..\packages\TEC_Core_Scheduler_Library.1.0.35\lib\net46\TEC.Core.Scheduler.dll</HintPath>
     </Reference>
     <Reference Include="TEC.Notification, Version=1.0.0.0, Culture=neutral, PublicKeyToken=72326827f24347da, processorArchitecture=MSIL">
-      <HintPath>..\packages\TEC_Notification_Library.1.0.25\lib\net45\TEC.Notification.dll</HintPath>
+      <HintPath>..\packages\TEC_Notification_Library.1.1.0\lib\net45\TEC.Notification.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Every8dNotificationExample.cs" />
     <Compile Include="FcmNotificationExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

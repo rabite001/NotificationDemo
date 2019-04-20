@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TEC.Notification;
+using TEC.Notification.Model.Fcm;
 using TEC.Notification.NotificationContents.Fcm;
 using TEC.Notification.NotificationProviderConfigs.Fcm;
 using TEC.Notification.NotificationProviders.Fcm;
@@ -19,7 +20,7 @@ namespace NotificationDemo
         /// 取得 Fcm 提供者設定檔
         /// </summary>
         /// <returns></returns>
-        public FcmProviderConfig getFcmProviderConfig()
+        public FcmProviderConfig getProviderConfig()
         {
             //產生 Fcm 提供者設定檔
             FcmProviderConfig fcmProviderConfig = new FcmProviderConfig()
@@ -34,7 +35,7 @@ namespace NotificationDemo
         /// <summary>
         /// 取得準備發送的 Fcm 通知
         /// </summary>
-        public Notification getFcmNotification()
+        public Notification getNotification()
         {
             Notification notification = new Notification()
             {
@@ -64,15 +65,15 @@ namespace NotificationDemo
         /// <summary>
         /// 使用 Fcm 通知提供者發送通知
         /// </summary>
-        public void sendFcmNotification()
+        public void executeProviderSendNotification()
         {
             FcmNotificationProvider fcmNotificationProvider = new FcmNotificationProvider();
 
             //設定 Fcm 通知提供者設定檔
-            fcmNotificationProvider.setProviderConfig(this.getFcmProviderConfig());
+            fcmNotificationProvider.setProviderConfig(this.getProviderConfig());
 
             //新增通知結果物件
-            NotificationResult notificationResult = new NotificationResult(this.getFcmNotification());
+            NotificationResult notificationResult = new NotificationResult(this.getNotification());
 
             //發送通知
             fcmNotificationProvider.sendNotification(ref notificationResult);

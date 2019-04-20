@@ -20,7 +20,7 @@ namespace NotificationDemo
         /// 取得 SMTP 提供者設定檔
         /// </summary>
         /// <returns></returns>
-        public SmtpProviderConfig getSmtpProviderConfig()
+        public SmtpProviderConfig getProviderConfig()
         {
             //產生 SMTP 提供者設定檔
             SmtpProviderConfig smtpProviderConfig = new SmtpProviderConfig()
@@ -40,7 +40,7 @@ namespace NotificationDemo
         /// <summary>
         /// 取得準備發送的 Smtp 通知
         /// </summary>
-        public Notification getSmtpNotification()
+        public Notification getNotification()
         {
 
             #region 內嵌圖檔
@@ -77,18 +77,18 @@ namespace NotificationDemo
         /// <summary>
         /// 使用 Smtp 通知提供者發送通知
         /// </summary>
-        public void sendSmtpNotification()
+        public void executeProviderSendNotification()
         {
-            SmtpNotificationProvider smtpNotificationProvidernew = new SmtpNotificationProvider();
+            SmtpNotificationProvider smtpNotificationProvider = new SmtpNotificationProvider();
 
             //設定 Smtp 通知提供者設定檔
-            smtpNotificationProvidernew.setProviderConfig(this.getSmtpProviderConfig());
+            smtpNotificationProvider.setProviderConfig(this.getProviderConfig());
 
             //新增通知結果物件
-            NotificationResult notificationResult = new NotificationResult(this.getSmtpNotification());
+            NotificationResult notificationResult = new NotificationResult(this.getNotification());
 
             //發送通知
-            smtpNotificationProvidernew.sendNotification(ref notificationResult);
+            smtpNotificationProvider.sendNotification(ref notificationResult);
         }
     }
 }
